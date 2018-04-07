@@ -39,15 +39,13 @@ Clock		D9
 
 ## Controls
 ```
-Button:		Function:
-
 [Common controls]
 Start		Turn on/off the bot
 Circle		Toggle Single leg mode
 Triangle	Move body of the ground (walking pos) and back to the ground
 Square		Toggle balance mode
-L1			Toggle shift mode
-L2			Toggle rotate mode
+L1		Toggle shift mode
+L2		Toggle rotate mode
 D-up		Move body up by 10mm
 D-down		Move body down by 10mm
 D-left		Decrease speed
@@ -57,8 +55,8 @@ D-right		Increase speed
 Select		Change the walking gait
 Left stick	Walk/Strafe
 Right stick	Rotate
-R1			Toggle double gait travel speed
-R2			Toggle double gait travel length
+R1		Toggle double gait travel speed
+R2		Toggle double gait travel length
 
 [Shift Controls]
 Left Stick	Shift body X/Z
@@ -72,5 +70,5 @@ Right Stick	Rotate body Y
 Select		Switch legs
 Left Stick	Move Leg X/Z (relative)
 Right Stick	Move Leg Y (absolute)
-R2			Hold/release leg position
+R2		Hold/release leg position
 ```
