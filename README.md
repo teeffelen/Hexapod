@@ -3,6 +3,14 @@ This is my personal fork of the original phoenix hexapod code written by [KurtE]
 It has been changed to work with phoenix clones from china, these are significantly cheaper, but use cheaper servo's with inverted logic. They are also slightly bigger. Therefore, I have made changes to some of the files (mainly `Hex_Cfg.h`) to make the inverse kinematics work better on the phoenix clone.
 
 ## Configuration
+Current setup:
+- Phoenix clone frame
+- 18x Towerpro MG996R servo
+- Arduino Nano
+- Lynxmotion SSC32-U
+- 6v 3000mah NiMH battery (servo power)
+- 9v battery (logic power)
+
 The code is setup to work with a phoenix hexapod clone (often found from Chinese sellers) running a Lynxmotion SSC32-U and Arduino Nano (Other Arduino boards should work too, just be sure to check the pinout for the PS2 remote). These should be connected as follows:
 ```
 TX	-> RX
