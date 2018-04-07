@@ -13,7 +13,7 @@ It has been changed to work with phoenix clones from china, these are significan
 ## Configuration
 The code is setup to work with a phoenix hexapod clone (often found from Chinese sellers) running a Lynxmotion SSC32-U and Arduino Nano (Other Arduino boards should work too, just be sure to check the pinout for the PS2 remote). These should be connected as follows:
 ```
-SSC32:	Arduino:
+SSC32:		Arduino:
 TX	->	RX
 RX	->	TX
 GND	->	GND
