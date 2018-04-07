@@ -1,5 +1,5 @@
 //=============================================================================
-// Header Files
+// V2.0
 //=============================================================================
 
 #define DEFINE_HEX_GLOBALS
@@ -16,4 +16,3 @@
 #include "Phoenix_Input_PS2.h"
 #include "Phoenix_Driver_SSC32.h"
 #include "Phoenix_Code.h"
-
