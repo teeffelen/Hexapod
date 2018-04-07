@@ -29,7 +29,7 @@
 
 //==============================================================================
 //[Arduino pin configuration]
-#define SOUND_PIN    5        // Botboarduino JR pin number
+#define SOUND_PIN    5
 #define PS2_DAT      6
 #define PS2_CMD      7
 #define PS2_SEL      8
