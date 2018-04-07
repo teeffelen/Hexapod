@@ -35,7 +35,7 @@ Command		D7
 Attention	D8
 Clock		D9
 ```
-*Pinout can be configured in the `Hex_Cfg.h` file*
+Pinout can be configured in the `Hex_Cfg.h` file.
 
 ## Controls
 ```
