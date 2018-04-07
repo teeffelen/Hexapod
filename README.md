@@ -10,15 +10,24 @@ It has been changed to work with phoenix clones from china, these are significan
 - 6v 3000mah NiMH battery (servo power)
 - 9v battery (logic power)
 
+## Usage
+1. Download the files as a zip and extract them.
+2. Download the [Bill Porter PS2 Library](http://www.billporter.info/2010/06/05/playstation-2-controller-arduino-library-v1-0/) and install it in the Ardiuno IDE.
+3. Open the `Phoenix_PS2_SSC32.ino` in the Arduino IDE.
+4. Select your board in the menu and hit verify.
+5. if the code compiles you are ready to upload it to your Arduino.
+6. Run the code by powering the hexapod and logic boards.
+7. Press `start` on the PS2 receiver to start the servos.
+
 ## Configuration
-The code is setup to work with a phoenix hexapod clone (often found from Chinese sellers) running a Lynxmotion SSC32-U and Arduino Nano (Other Arduino boards should work too, just be sure to check the pinout for the PS2 remote). These should be connected as follows:
+The code is setup to work with a phoenix hexapod clone running a Lynxmotion SSC32-U and Arduino Nano (Other Arduino boards should work too, just be sure to check the pinout for the PS2 remote). These should be connected as follows:
 ```
 SSC32:	Arduino:
 TX	RX
 RX	TX
 GND	GND
 ```
-The hexapod is controlled with a generic PS2 remote, you'll need to download the [Bill Porter PS2 Library](http://www.billporter.info/2010/06/05/playstation-2-controller-arduino-library-v1-0/) yourself and install it in the Arduino IDE. The PS2 receiver should be wired up to the Arduino as follows:
+The hexapod itself is controlled with a generic PS2 remote, you'll need to download the [Bill Porter PS2 Library](http://www.billporter.info/2010/06/05/playstation-2-controller-arduino-library-v1-0/) yourself and install it in the Arduino IDE. The PS2 receiver should be wired up to the Arduino as follows:
 ```
 PS2:		Arduino:
 Data		D6
