@@ -68,9 +68,6 @@ void ServoDriver::Init(void) {
 #endif    
 #endif    
 #endif
-  // Instead of hard checking version numbers instead ask it for
-  // status of one of the players.  If we do not get a response...
-  // probably does not support 
   SSCSerial.println(F("QPL0"));
   cbRead = SSCRead((byte*)abT, 4, 25000, (word)-1);
 

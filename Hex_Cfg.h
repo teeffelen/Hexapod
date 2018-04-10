@@ -118,9 +118,9 @@
 //==============================================================================
 //[Leg dimensions]
 //Universal dimensions for each leg in mm
-#define cXXCoxaLength     29
-#define cXXFemurLength    76
-#define cXXTibiaLength    106
+#define cXXCoxaLength     27
+#define cXXFemurLength    85
+#define cXXTibiaLength    124
 #define cXXTarsLength     85
 
 #define cRRCoxaLength     cXXCoxaLength
@@ -163,19 +163,19 @@
 #define cLMCoxaAngle1    0
 #define cLFCoxaAngle1    600
 
-#define cRROffsetX       -43
-#define cRROffsetZ       82
-#define cRMOffsetX       -63
+#define cRROffsetX       -38
+#define cRROffsetZ       75
+#define cRMOffsetX       -64
 #define cRMOffsetZ       0
-#define cRFOffsetX       -43
-#define cRFOffsetZ       -82
+#define cRFOffsetX       -38
+#define cRFOffsetZ       -75
 
-#define cLROffsetX       43
-#define cLROffsetZ       82
-#define cLMOffsetX       63
+#define cLROffsetX       38
+#define cLROffsetZ       75
+#define cLMOffsetX       64
 #define cLMOffsetZ       0
-#define cLFOffsetX       43
-#define cLFOffsetZ       -82
+#define cLFOffsetX       38
+#define cLFOffsetZ       -75
 
 //==============================================================================
 //[Start positions legs]

@@ -20,7 +20,7 @@
 #define  MAXPS2ERRORCNT   6
 
 #ifndef MAX_BODY_Y
-#define MAX_BODY_Y 100
+#define MAX_BODY_Y 130
 #endif
 
 //=============================================================================
@@ -190,7 +190,7 @@ void InputController::ControlInput(void)
         if (g_BodyYOffset>0)
           g_BodyYOffset = 0;
         else
-          g_BodyYOffset = 35;
+          g_BodyYOffset = 40;
         fAdjustLegPositions = true;
       }
 
@@ -323,9 +323,9 @@ void InputController::ControlInput(void)
             g_InControlState.SelectedLeg=0;
         }
 
-        g_InControlState.SLLeg.x= (lx - 128)/2;
-        g_InControlState.SLLeg.y= (ps2x.Analog(PSS_RY) - 128)/10;
-        g_InControlState.SLLeg.z = (ly - 128)/2;
+        g_InControlState.SLLeg.x = (ps2x.Analog(PSS_LX) - 128)/2;
+        g_InControlState.SLLeg.y = (ps2x.Analog(PSS_RY) - 128)/10;
+        g_InControlState.SLLeg.z = (ps2x.Analog(PSS_LY) - 128)/2;
 
         if (ps2x.ButtonPressed(PSB_R2)) {
           MSound(1, 50, 2000);
