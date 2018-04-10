@@ -1,7 +1,15 @@
 //==============================================================================
-// V2.1
+//Lynxmotion Phoenix Clone
+//
+//Version:    3.1
+//Date:       09-04-2018
+//Programmer: Jeroen Janssen    (Xan)   - Main code
+//            Kurt Eckhardt     (KurtE) - Converted to arduino
+//            Lex van Teeffelen (Lexons)- Converted to AliExpress Hexapod
+//
+//This code should only be used on phoenix clones running the 
+// Lynxmotion SSC32-U and PS2 remote.
 //==============================================================================
-
 #define DEFINE_HEX_GLOBALS
 #if ARDUINO>99
 #include <Arduino.h>
@@ -50,8 +58,8 @@ static const word GetSin[] PROGMEM = {
 
 //==============================================================================
 // Inversed for Towerpro MG996R servo's
-// Change values if you are using other servo's and/or experiencing problems...
-
+// Change these values in the Hex_Cfg.h file!!!
+/**
 #ifndef cRRCoxaInv
 #define cRRCoxaInv 0
 #endif
@@ -131,7 +139,7 @@ static const word GetSin[] PROGMEM = {
 #ifndef cLFTarsInv
 #define cLFTarsInv 0
 #endif
-
+**/
 //==============================================================================
 
 #ifndef BALANCE_DELAY

@@ -1,11 +1,20 @@
-//====================================================================
-// V2.5
-//====================================================================
+//==============================================================================
+//Lynxmotion Phoenix Clone
+//
+//Version:    3.1
+//Date:       09-04-2018
+//Programmer: Jeroen Janssen    (Xan)   - Main code
+//            Kurt Eckhardt     (KurtE) - Converted to arduino
+//            Lex van Teeffelen (Lexons)- Converted to AliExpress Hexapod
+//
+//This code should only be used on phoenix clones running the 
+// Lynxmotion SSC32-U and PS2 remote.
+//==============================================================================
 // [Include files]
 #if ARDUINO>99
-#include <Arduino.h> // Arduino 1.0
+#include <Arduino.h>
 #else
-#include <Wprogram.h> // Arduino 0022
+#include <Wprogram.h>
 #endif
 #include <PS2X_lib.h>
 
@@ -17,15 +26,15 @@
 #define GPPLAYERMODE      4
 
 #define cTravelDeadZone   4
-#define  MAXPS2ERRORCNT   6
+#define MAXPS2ERRORCNT    6
 
 #ifndef MAX_BODY_Y
-#define MAX_BODY_Y 130
+#define MAX_BODY_Y 140
 #endif
 
-//=============================================================================
+//==============================================================================
 // Global - Local to this file only...
-//=============================================================================
+//==============================================================================
 PS2X ps2x;
 
 InputController  g_InputController;

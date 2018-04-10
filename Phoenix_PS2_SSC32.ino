@@ -1,7 +1,15 @@
-
-//=============================================================================
-// V2.0
-//=============================================================================
+//==============================================================================
+//Lynxmotion Phoenix Clone
+//
+//Version:    3.1
+//Date:       09-04-2018
+//Programmer: Jeroen Janssen    (Xan)   - Main code
+//            Kurt Eckhardt     (KurtE) - Converted to arduino
+//            Lex van Teeffelen (Lexons)- Converted to AliExpress Hexapod
+//
+//This code should only be used on phoenix clones running the 
+// Lynxmotion SSC32-U and PS2 remote.
+//==============================================================================
 
 #define DEFINE_HEX_GLOBALS
 #if ARDUINO>99

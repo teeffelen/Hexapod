@@ -1,23 +1,28 @@
 //==============================================================================
-// V2.3
+//Lynxmotion Phoenix Clone
+//
+//Version:    3.1
+//Date:       09-04-2018
+//Programmer: Jeroen Janssen    (Xan)   - Main code
+//            Kurt Eckhardt     (KurtE) - Converted to arduino
+//            Lex van Teeffelen (Lexons)- Converted to AliExpress Hexapod
+//
+//This code should only be used on phoenix clones running the 
+// Lynxmotion SSC32-U and PS2 remote.
 //==============================================================================
 #ifndef HEX_CFG_PHOENIX3_H
 #define HEX_CFG_PHOENIX3_H
-#define OPT_TERMINAL_MONITOR
 
-#ifdef OPT_TERMINAL_MONITOR
-//#define OPT_SSC_FORWARDER
-#define OPT_FIND_SERVO_OFFSETS
-#endif
-
+//#define OPT_TERMINAL_MONITOR
+//#define OPT_FIND_SERVO_OFFSETS  //Only works with OPT_TERMINAL_MONITOR
 #define OPT_GPPLAYER
 #define OPT_SINGLELEG
 
-#define DBGSerial         Serial
+#define DBGSerial Serial
 //#define DEBUG_IOPINS
 
 #if defined(UBRR1H)
-#define SSCSerial         Serial1
+#define SSCSerial Serial1
 #else
 #endif
 
@@ -25,7 +30,7 @@
 #define USE_SSC32
 //#define  cSSC_BINARYMODE 1
 //#undef OPT_FIND_SERVO_OFFSETS
-#define cSSC_BAUD        38400   //SSC32 BAUD rate
+#define cSSC_BAUD 38400   //SSC32 BAUD rate
 
 //==============================================================================
 //[Arduino pin configuration]
@@ -34,8 +39,8 @@
 #define PS2_CMD      7
 #define PS2_SEL      8
 #define PS2_CLK      9
-//#define cSSC_OUT     0
-//#define cSSC_IN      1
+#define cSSC_IN      10
+#define cSSC_OUT     11
 
 //==============================================================================
 //[SSC32 pin configuration]
@@ -69,57 +74,78 @@
 #define cLFTibiaPin     26   //Front Left leg Knee
 #define cLFTarsPin      27   //Tar
 
+//==============================================================================
+//[Inverse Servo Direction]
+#define cRRCoxaInv  0
+#define cRMCoxaInv  0
+#define cRFCoxaInv  0
+#define cRRFemurInv 0
+#define cRMFemurInv 0
+#define cRFFemurInv 0
+#define cRRTibiaInv 0
+#define cRMTibiaInv 0
+#define cRFTibiaInv 0
+
+#define cLRCoxaInv  1
+#define cLMCoxaInv  1
+#define cLFCoxaInv  1
+#define cLRFemurInv 1
+#define cLMFemurInv 1
+#define cLFFemurInv 1
+#define cLRTibiaInv 1
+#define cLMTibiaInv 1
+#define cLFTibiaInv 1
 
 //==============================================================================
 //[Min/Max angles]
-#define cRRCoxaMin1 -260
-#define cRRCoxaMax1 740
+#define cRRCoxaMin1   -260
+#define cRRCoxaMax1   740
 #define cRRFemurMin1  -1010
 #define cRRFemurMax1  950
 #define cRRTibiaMin1  -1060
 #define cRRTibiaMax1  770
 
-#define cRMCoxaMin1 -530
-#define cRMCoxaMax1 530
+#define cRMCoxaMin1   -530
+#define cRMCoxaMax1   530
 #define cRMFemurMin1  -1010
 #define cRMFemurMax1  950
 #define cRMTibiaMin1  -1060
 #define cRMTibiaMax1  770
 
-#define cRFCoxaMin1 -580
-#define cRFCoxaMax1 740
+#define cRFCoxaMin1   -580
+#define cRFCoxaMax1   740
 #define cRFFemurMin1  -1010
 #define cRFFemurMax1  950
 #define cRFTibiaMin1  -1060
 #define cRFTibiaMax1  770
 
-#define cLRCoxaMin1 -740
-#define cLRCoxaMax1 260
+#define cLRCoxaMin1   -740
+#define cLRCoxaMax1   260
 #define cLRFemurMin1  -950
 #define cLRFemurMax1  1010
 #define cLRTibiaMin1  -770
 #define cLRTibiaMax1  1060
 
-#define cLMCoxaMin1 -530
-#define cLMCoxaMax1 530
+#define cLMCoxaMin1   -530
+#define cLMCoxaMax1   530
 #define cLMFemurMin1  -950
 #define cLMFemurMax1  1010
 #define cLMTibiaMin1  -770
 #define cLMTibiaMax1  1060
 
-#define cLFCoxaMin1 -740
-#define cLFCoxaMax1 580
+#define cLFCoxaMin1   -740
+#define cLFCoxaMax1   580
 #define cLFFemurMin1  -950
 #define cLFFemurMax1  1010
 #define cLFTibiaMin1  -770
 #define cLFTibiaMax1  1060
 
-
 //==============================================================================
 //[Leg dimensions]
 //Universal dimensions for each leg in mm
-#define cXXCoxaLength     27
-#define cXXFemurLength    85
+//Set up for the AliExpress Phoenix Clones!
+#define cXXCoxaLength     29
+#define cXXFemurLength    84
 #define cXXTibiaLength    124
 #define cXXTarsLength     85
 
@@ -153,7 +179,6 @@
 #define cLFTibiaLength    cXXTibiaLength
 #define cLFTarsLength     cXXTarsLength
 
-
 //==============================================================================
 //[Body dimensions]
 #define cRRCoxaAngle1    -600
@@ -163,19 +188,19 @@
 #define cLMCoxaAngle1    0
 #define cLFCoxaAngle1    600
 
-#define cRROffsetX       -38
-#define cRROffsetZ       75
-#define cRMOffsetX       -64
+#define cRROffsetX       -43
+#define cRROffsetZ       74
+#define cRMOffsetX       -65
 #define cRMOffsetZ       0
-#define cRFOffsetX       -38
-#define cRFOffsetZ       -75
+#define cRFOffsetX       -43
+#define cRFOffsetZ       -74
 
-#define cLROffsetX       38
-#define cLROffsetZ       75
-#define cLMOffsetX       64
+#define cLROffsetX       43
+#define cLROffsetZ       74
+#define cLMOffsetX       65
 #define cLMOffsetZ       0
-#define cLFOffsetX       38
-#define cLFOffsetZ       -75
+#define cLFOffsetX       43
+#define cLFOffsetZ       -74
 
 //==============================================================================
 //[Start positions legs]
@@ -208,4 +233,5 @@
 #define cLFInitPosY      CHexInitY
 #define cLFInitPosZ      -CHexInitXZSin60
 
+//==============================================================================
 #endif CFG_HEX_H
